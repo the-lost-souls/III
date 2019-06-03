@@ -1,0 +1,23 @@
+option caseexact
+option stack=65536
+name x:\iii\part4\s.exe
+file x:\iii\part4\s.obj
+file x:\iii\part4\3.obj
+file x:\iii\part2\1.obj
+file x:\iii\part3\2.obj
+file x:\iii\part5\5.obj
+file x:\iii\part6\6.obj
+file x:\iii\part7\7.obj
+file x:\iii\part8\8.obj
+file w:\general\general.lib
+file w:\divlibs\zlib\zlib.lib
+file w:\divlibs\ims\ims.lib
+file w:\divlibs\ims\binfile.lib
+file w:\render\render.lib
+file w:\vectors\vectors.lib
+file w:\gfx\gfx.lib
+file w:\pak\pak.obj
+file w:\divlibs\ptc072\library\dos\wc11.0\release.lib
+file w:\plugins\plugins.lib
+
+

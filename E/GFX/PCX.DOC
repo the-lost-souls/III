@@ -1,0 +1,26 @@
+Description for .PCX decoder
+
+Last update : 21.05.1997
+Cyberfish of The Lost Souls
+
+Decodes a standard PCX-picture.
+
+
+
+In:
+        edx = offset filename
+        ecx = filesize (if 0, then read entire file)
+        esi = fileoffset to start reading GIF
+
+Out:
+        edi = Offset decoded picture
+        PCX_Width     DD 0                              ;Image width
+        PCX_Heigth    DD 0                              ;Image heigth
+        PCX_XPos      DD 0                              ;Image's horisontal pos
+        PCX_YPos      DD 0                              ;Image's vertical pos
+        PCX_Palette   DB 768 DUP (0)                    ;Palette (RGB)
+
+        cf and SYS_QuitMsg set if any error
+
+
+!!!Uses MEM-services!!!

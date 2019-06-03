@@ -1,0 +1,424 @@
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ Different routines ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+[MN_MainLoop]
+
+    Takes the offset in SYS_OListOffs and runs all the objects in this list.
+    It first checks for fakeobjects and eventually end of list. Then it runs the
+    plugin for the object, and at last checks if SYS_QuitFlag is set.
+
+    Special offset-values:
+            FFFFFFFFh	= End of objectlist
+            00000000h	= Ignore object, don't run!
+
+    Source located in \GENERAL\MAIN.ASM
+
+    -include \GENERAL\MAIN.INC
+    -link with \GENERAL\MAIN.OBJ or \GENERAL\SYS.LIB.
+
+
+
+
+
+[KEY_Pressed]
+
+    This is an object. Just set it up whenever in your objectlist, and it
+    will break the MainLoop if keypressed. The routine for the object is
+    called KEY_Pressed_, and source is located in \GENERAL\MAIN.ASM
+
+    -include \GENERAL\MAIN.INC
+    -link with \GENERAL\MAIN.OBJ or \GENERAL\SYS.LIB.
+
+
+
+
+
+[ZERO_Object]
+
+    If you set up an object with type 0000, this routine will be run. The
+    objectroutine does nothing, but you may set up the objectstructure
+    at your own choise. May be used for setting up plugins that needs no
+    object. Located in \GENERAL\MAIN.ASM.
+
+    -include \GENERAL\MAIN.INC
+    -link with \GENERAL\MAIN.OBJ or \GENERAL\SYS.LIB.
+
+
+
+
+
+[GIF_Load]
+
+    Decodes a GIF87/89-file and stores it in memory. Works only with 256-color
+    pictures, but does not test for extension-blocks. However, it DOES work
+    with interlaced pictures.
+
+    In:
+         edx = OFFSET FileName
+         ecx = Filesize. If zero then read to end of file
+         esi = Position in file to read from
+
+    Out:
+         edi = Offset decoded picture
+         GIF_SWidth    DD                                ;Screen horisontal res
+         GIF_SHeigth   DD                                ;Screen vertical res
+         GIF_Width     DD                                ;Image width
+         GIF_Heigth    DD                                ;Image heigth
+         GIF_XPos      DD                                ;Image's horisontal pos
+         GIF_YPos      DD                                ;Image's vertical pos
+         GIF_Colors    DD                                ;Number of colors in GIF
+         GIF_Palette   DB 768 DUP (?)                    ;Palette (RGB)
+
+         cf and SYS_QuitMsg set if any error
+
+
+    It now also works with interlaced rasterdata. Still no testing for
+    extension blocks.
+
+    IMPORTANT NOTES!
+         * The decoder won't work if GIF contains extension blocks (GIF89a)
+         * It DOES work with interlaced pictures
+         * NOT working with anything else than 256 color GIFs.
+         * No testing of codevalues. A corrupt GIF will phuck up everything.
+         * MEM-service must be initialized
+
+
+    Source located in \GFX\GIF.ASM
+    -include \GFX\GIF.INC
+    -link \GFX\GIF.OBJ or \GFX\GFX.LIB
+
+
+
+
+
+[PCX_Load]
+
+Decodes a standard PCX-picture.
+
+In:
+        edx = offset filename
+        ecx = filesize (if 0, then read entire file)
+        esi = fileoffset to start reading GIF
+
+Out:
+        edi = Offset decoded picture
+        PCX_Width     DD 0                              ;Image width
+        PCX_Heigth    DD 0                              ;Image heigth
+        PCX_XPos      DD 0                              ;Image's horisontal pos
+        PCX_YPos      DD 0                              ;Image's vertical pos
+        PCX_Palette   DB 768 DUP (0)                    ;Palette (RGB)
+
+        cf and SYS_QuitMsg set if any error
+
+
+!!!Uses MEM-services!!!
+
+    Source located in \GFX\PCX.ASM
+    -include \GFX\PCX.INC
+    -link \GFX\PCX.OBJ or \GFX\GFX.LIB
+
+
+
+
+
+[D32_Setup]
+
+    -Checks for coprocessor. (!!! Not yet implemented !!! )
+    -Frees all FPU-registers
+    -Sets FPU controlword-variables
+    -Sets SYS_ProgBase, SYS_buf_es, SYS_buf_flat
+    -Allocates tempbuffer
+
+
+    Source located in \GENERAL\GENERAL.ASM
+    -include \GENERAL\GENERAL.INC
+    -link \GENERAL\GENERAL.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+
+[PC_PCount]
+
+    Prints a string, ecx bytes long.
+
+           [edx] = offset string
+            ecx  = string length
+
+    Source located in \GENERAL\GENERAL.ASM
+    -include \GENERAL\GENERAL.INC
+    -link \GENERAL\GENERAL.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+
+[PZ_PZero]
+
+    Prints a string, terminated with zero.
+
+           [edx] = Offset string
+
+    Source located in \GENERAL\GENERAL.ASM
+    -include \GENERAL\GENERAL.INC
+    -link \GENERAL\GENERAL.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+
+[PH_PHex]
+
+    Prints the number in eax as hexadecimal
+
+            eax = number
+
+    Source located in \GENERAL\GENERAL.ASM
+    -include \GENERAL\GENERAL.INC
+    -link \GENERAL\GENERAL.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+
+[PD_PDec]
+
+    Prints the number in eax as decimal.
+
+            eax = number
+
+    Source located in \GENERAL\GENERAL.ASM
+    -include \GENERAL\GENERAL.INC
+    -link \GENERAL\GENERAL.OBJ or \GENERAL\SYS.LIB
+
+
+
+[CN_8_16]
+
+    Converts an 8-bit picture to a 16-bit hicolor picture.
+
+             [esi] = picture to convert
+             [edi] = where to store picture
+             [ebp] = Offset to 256-color palette
+              ecx  = Number of pixels to convert
+
+
+    Source located in \GENERAL\GENERAL.ASM
+    -include \GENERAL\GENERAL.INC
+    -link \GENERAL\GENERAL.OBJ or \GENERAL\SYS.LIB
+
+
+
+[MEM_Init]
+
+    Initializes the memory system by allocating a heap, using DOS32 service
+    EE42h (int 31h).
+
+    In:
+         eax = 0        :Allocate all available memory for heap
+         eax = +xxx     :Allocate xxx bytes of memory for heap
+         eax = -xxx     :Allocate TOTAL-xxx bytes of memory for heap
+
+
+    Out:
+         carry flag and SYS_QuitMsg set if any error
+
+    Register(s) changed: None
+
+    Source located in \GENERAL\MEM.ASM
+
+    -include \GENERAL\MEM.INC
+    -link with \GENERAL\MEM.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+[MEM_Alloc]
+
+    Allocates a block of memory in the heap. (32 byte aligned)
+
+    In:
+         eax = size of block to be allocated
+
+    Out:
+         edx = offset of allocated block
+         eax = size of block allocated
+         carry flag and SYS_QuitMsg set if any error
+
+
+    Register(s) changed: edx
+
+
+    Source located in \GENERAL\MEM.ASM
+
+    -include \GENERAL\MEM.INC
+    -link with \GENERAL\MEM.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+[MEM_DeAlloc]
+
+    Deallocates a block of memory.
+
+    In:
+         edx = Offset of block to be deallocated
+
+    Out:
+         carry flag and SYS_QuitMsg set if any error
+
+    Register(s) changed: None
+
+    Source located in \GENERAL\MEM.ASM
+
+    -include \GENERAL\MEM.INC
+    -link with \GENERAL\MEM.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+[MEM_Cleanup]
+
+    Cleans up the memory system's organizing-arrays.
+
+
+    Out:
+         carry flag and SYS_QuitMsg set if any error.
+
+    Register(s) changed: None
+
+    Source located in \GENERAL\MEM.ASM
+
+    -include \GENERAL\MEM.INC
+    -link with \GENERAL\MEM.OBJ or \GENERAL\SYS.LIB
+
+
+
+
+
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ SYSTEM Variables ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+DD SYS_ProgBase          "SYSTEM: Program base address
+
+
+DW SYS_buf_es            "SYSTEM: 8k buffer segment address"
+                         8k buffer for real mode callbacks. Segment address.
+
+
+DD SYS_buf_flat          "SYSTEM: 8k buffer linear address"
+                         8k buffer for real mode callbacks. Linear address.
+
+
+DD SYS_OListOffs         "SYSTEM: ObjectList Offset"
+                         Points to the objectlist that SYS_MainLoop will run
+                         _NEXT_ frame.
+
+
+DD SYS_OOffs             "SYSTEM: ObjectOffset"
+                         Set by SYS_MainLoop when call to objectroutines.
+                         Points to the datastructure of the actual object.
+
+
+DD SYS_POffs             "SYSTEM: PluginOffset"
+                         Set before call to a plugins. Points to the actual
+                         plugin's datastructure.
+
+
+DD SYS_PCaller           "SYSETM: PluginCaller"
+                         Set before call to a plugins. Points to the object   som kaller plugin'en
+                         which called the plugin.
+
+
+DD SYS_ORoutines[ 0..n ] "SYSTEM: ObjectRoutines"
+                         List with offsets to objectroutines.
+
+
+DD SYS_QuitFlag          "SYSTEM: QuitFlag"
+                         This flag is the only way to break the SYS_MainLoop. settes av
+                         May be used by the objects to indicate an error,
+                         ESC has been pressed etc.
+
+                             00000000 = Continue loop
+                             FFFFFFFF = Break loop
+
+
+DD SYS_QuitMsg           "SYSTEM: QuitMessage"
+                         Points to a string that may be displayed after the
+                         SYS_MainLoop has been stopped by SYS_QuitFlag.
+                         Default "SYS: No message. SYS_QuitFlag = 0FFFFFFFFh"
+
+
+DD SYS_DBufOffs          "SYSTEM: Doublebuffer offset"
+                         Offset to the doublebuffer
+
+
+DD SYS_DBufSize          "SYSTEM: Doublebuffer size"
+                         Size of the doublebuffer
+
+DD SYS_TempBuf           "SYSTEM: Temporary buffer, offset"
+                         Offset to the systems temporary buffer. May be used
+                         anytime by user. However, some systemroutines destroy
+                         this buffer.
+
+
+
+DD SYS_TempSize          "SYSTEM: Tempbuffer size"
+                         Size of the tempbuffer. Default is 128k. May be set
+                         by user BEFORE call to D32_Setup
+
+
+DD SYS_DBufLine          "SYSTEM: Doublebuffer, scanlinesize"
+                         Number of bytes each scanline in doublebuffer
+
+
+DD SYS_ZBufLine          "SYSTEM: Z-buffer, scanlinesize"
+                         Number of bytes each scanline in Z-buffer
+
+
+DW FPU_Original          "FPU: Original control word"
+DW FPU_Round             "FPU: Controlword, round"
+DW FPU_Chop              "FPU: Controlword, chop"
+DW FPU_RoundUp           "FPU: Controlword, round up"
+DW FPU_RoundDown         "FPU: Controlword, round down"
+                         All these values are set by D32_Setup.
+
+
+DD MEM_Flag              "MEMORY: Initialization flag"
+                         0001   : Memory system not initialized
+                         0000   : Memory system initialized
+
+
+DD MEM_Total             "MEMORY: Total memory"
+                         Total number of bytes available when MEM_Init was
+                         called.
+
+
+DD MEM_Heap              "MEMORY: Heapsize"
+                         Number of bytes in heap.
+
+
+
+
+
+
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ SYSTEM Objects ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+0000 = C_ZeroObject       "SYS_ZObject"
+                          Nothing but a ret. May be used for setting up
+                          plugins that doesn't require an object.
+
+0001 = C_KeyPressed       "KEY_Pressed"
+                          Checks if a key is pressed. Eventually sets
+                          SYS_QuitFlag and SYS_QuitMsg.
+
+0002 = C_VEC01            "VEC_TextFlat"
+                          Vectorobject. Perspective texturemapping. No
+                          shading.

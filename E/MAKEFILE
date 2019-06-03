@@ -1,0 +1,432 @@
+#######################################################################
+#Programs used:
+
+CPP = wpp386.exe
+ASM = tasm.exe
+LIB = wlib.exe
+EXE = wlink.exe
+
+#######################################################################
+#Program flags
+
+CPPFLAGS = -d2
+ASMFLAGS = /m4 /ml /zi
+LIBFLAGS =
+CPPINCLUDE = -ic:\code\prog\watcom11\h
+EXEFLAGS =
+#debug dwarf
+
+#Path definitions
+
+VBEPATH = w:\vbe
+SYSPATH = w:\general
+VECPATH = w:\vectors
+RENPATH = w:\render
+GFXPATH = w:\gfx
+
+#Library names
+
+SYSLIB = $(SYSPATH)\general.lib
+VECLIB = $(VECPATH)\vectors.lib
+RENLIB = $(RENPATH)\render.lib
+GFXLIB = $(GFXPATH)\gfx.lib
+
+
+all: w:\clwo\clwo.exe w:\clwo\clws.exe x:\fast\1\s.exe
+#x:\iii\part2\s.exe x:\iii\part5\s.exe x:\iii\part4\s.exe  x:\iii\part3\s.exex:\iii\part6\s.exe
+
+
+
+
+#w:\test\s.exe w:\test\k.exe
+
+
+#w:\test\m.exe
+#w:\test\s.exe
+
+#w:\capture\c.exe
+#x:\tja\s.exe
+
+
+
+#######################################################################
+#Building x:\iii\v.exe
+
+x:\iii\part1\v.obj: x:\iii\part1\v.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h x:\iii\part1\part1.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part1\v -fo=x:\iii\part1\v.obj
+
+x:\iii\part1\v.exe: x:\iii\part1\v.obj x:\iii\part1\part1.obj w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj x:\callback.obj w:\render\render.lib w:\plugins\plugins.lib
+	wlink $(EXEFLAGS) @x:\iii\part1\v.lnk
+
+x:\iii\part1\part1.obj: x:\iii\part1\part1.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h x:\iii\part1\part1.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part1\part1 -fo=x:\iii\part1\part1.obj
+
+x:\callback.obj: x:\callback.asm w:\general\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm x:\callback.obj
+
+
+#######################################################################
+#Building w:\clwo\clwo.exe and w:\clwo\clws.exe
+
+
+#---- Common files...
+
+w:\clwo\div.obj: w:\clwo\div.cpp w:\clwo\div.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\clwo\div.cpp -fo=w:\clwo\div.obj
+
+
+
+
+#---- Dependencies for clwo.exe
+
+w:\clwo\clwo.exe: w:\clwo\clwo.obj w:\clwo\lwo.obj w:\clwo\div.obj w:\general\aquarium.obj w:\general\var.obj w:\pak\pak.obj
+	wlink $(EXEFLAGS) @w:\clwo\clwo.lnk
+
+w:\clwo\clwo.obj: w:\clwo\clwo.cpp w:\clwo\lwo.h w:\clwo\div.h w:\vectors\vec_file.h w:\pak\pak.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\clwo\clwo -fo=w:\clwo\clwo.obj
+
+w:\clwo\lwo.obj: w:\clwo\lwo.cpp w:\clwo\lwo.h w:\clwo\div.h w:\vectors\vec_file.h w:\pak\pak.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\clwo\lwo -fo=w:\clwo\lwo.obj
+
+
+
+
+
+#---- Dependencies for CLWS.exe
+
+w:\clwo\clws.exe: w:\clwo\clws.obj w:\clwo\lws.obj w:\clwo\div.obj w:\clwo\lwo.obj w:\general\aquarium.obj w:\general\var.obj w:\pak\pak.obj
+	wlink $(EXEFLAGS) @w:\clwo\clws.lnk
+
+w:\clwo\clws.obj: w:\clwo\clws.cpp w:\clwo\lws.h w:\clwo\div.h w:\pak\pak.h w:\general\var.h w:\vectors\scn_file.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\clwo\clws -fo=w:\clwo\clws.obj
+
+w:\clwo\lws.obj: w:\clwo\lws.cpp w:\clwo\lws.h w:\clwo\lwo.h w:\clwo\div.h w:\vectors\scn_file.h w:\vectors\vec_file.h w:\pak\pak.h w:\general\var.h w:\plugins\flare.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\clwo\lws -fo=w:\clwo\lws.obj
+
+
+
+
+#######################################################################
+#Building w:\vectors\...
+
+VECOBJ = $(VECPATH)\vec_file.obj $(VECPATH)\vec_run.obj $(VECPATH)\scn_file.obj $(VECPATH)\scn_run.obj $(VECPATH)\v01.obj $(VECPATH)\v02.obj $(VECPATH)\v03.obj $(VECPATH)\v04.obj $(VECPATH)\v05.obj $(VECPATH)\v06.obj $(VECPATH)\v07.obj $(VECPATH)\v08.obj $(VECPATH)\v09.obj $(VECPATH)\v10.obj $(VECPATH)\v11.obj $(VECPATH)\v12.obj w:\vectors\lights.obj
+
+$(VECLIB): $(VECOBJ)
+	$(LIB) $(LIBFLAG) $(VECLIB) @w:\vectors\vectors.lnk
+
+$(VECPATH)\vec_file.obj: w:\vectors\vec_file.cpp w:\general\var.h w:\vectors\vec_file.h w:\vectors\vec_run.h w:\general\txt.h w:\pak\pak.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\vectors\vec_file -fo=w:\vectors\vec_file.obj
+
+$(VECPATH)\vec_run.obj: w:\vectors\vec_run.cpp w:\vectors\vec_run.h w:\general\txt.h w:\vectors\vec_file.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\vectors\vec_run -fo=w:\vectors\vec_run.obj
+
+$(VECPATH)\scn_file.obj: w:\vectors\scn_file.cpp w:\general\var.h w:\vectors\vec_file.h w:\vectors\vec_run.h w:\vectors\scn_file.h w:\vectors\scn_run.h w:\plugins\flare.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\vectors\scn_file -fo=w:\vectors\scn_file.obj
+
+$(VECPATH)\scn_run.obj: w:\vectors\scn_run.cpp w:\vectors\scn_run.h w:\general\txt.h w:\vectors\scn_file.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) /w0 $(CPPINCLUDE) w:\vectors\scn_run -fo=w:\vectors\scn_run.obj
+
+$(VECPATH)\v01.obj: $(VECPATH)\v01.asm $(SYSPATH)\var.inc $(VECPATH)\v01macro.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v01.obj
+
+$(VECPATH)\v02.obj: $(VECPATH)\v02.asm $(SYSPATH)\var.inc $(VECPATH)\v02macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v02.obj
+
+$(VECPATH)\v03.obj: $(VECPATH)\v03.asm $(SYSPATH)\var.inc $(VECPATH)\v03macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v03.obj
+
+$(VECPATH)\v04.obj: $(VECPATH)\v04.asm $(SYSPATH)\var.inc $(VECPATH)\v04macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v04.obj
+
+$(VECPATH)\v05.obj: $(VECPATH)\v05.asm $(SYSPATH)\var.inc $(VECPATH)\v05macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v05.obj
+
+$(VECPATH)\v06.obj: $(VECPATH)\v06.asm $(SYSPATH)\var.inc $(VECPATH)\v06macro.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v06.obj
+
+$(VECPATH)\v07.obj: $(VECPATH)\v07.asm $(SYSPATH)\var.inc $(VECPATH)\v07macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v07.obj
+
+$(VECPATH)\v08.obj: $(VECPATH)\v08.asm $(SYSPATH)\var.inc $(VECPATH)\v08macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v08.obj
+
+$(VECPATH)\v09.obj: $(VECPATH)\v09.asm $(SYSPATH)\var.inc $(VECPATH)\v09macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v09.obj
+
+$(VECPATH)\v10.obj: $(VECPATH)\v10.asm $(SYSPATH)\var.inc $(VECPATH)\v10macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v10.obj
+
+$(VECPATH)\v11.obj: $(VECPATH)\v11.asm $(SYSPATH)\var.inc $(VECPATH)\v11macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v11.obj
+
+$(VECPATH)\v12.obj: $(VECPATH)\v12.asm $(SYSPATH)\var.inc $(VECPATH)\v12macro.inc $(VECPATH)\lights.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(VECPATH)\v12.obj
+
+$(VECPATH)\lights.obj: $(VECPATH)\lights.asm w:\general\var.inc
+	$(ASM) $(ASMFLAGS) $(VECPATH)\lights.asm $(VECPATH)\lights.obj
+
+
+
+#######################################################################
+#Building w:\general\...
+
+SYSOBJ = $(SYSPATH)\var.obj $(SYSPATH)\main.obj $(SYSPATH)\sort.obj $(SYSPATH)\aquarium.obj $(SYSPATH)\2d.obj $(SYSPATH)\texture.obj $(SYSPATH)\lists.obj $(SYSPATH)\canvas.obj $(SYSPATH)\filters.obj $(SYSPATH)\bln2.obj $(SYSPATH)\stars.obj
+
+$(SYSLIB): $(SYSOBJ)
+	$(LIB) $(LIBFLAG) $(SYSLIB) @w:\general\general.lnk
+
+w:\general\var.obj: w:\general\var.asm
+	$(ASM) $(ASMFLAGS) $(ASMINCLUDE) w:\general\var.asm w:\general\var.obj
+
+$(SYSPATH)\aquarium.obj: $(SYSPATH)\aquarium.cpp w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\general\aquarium.cpp -fo=w:\general\aquarium.obj
+
+$(SYSPATH)\texture.obj: $(SYSPATH)\texture.cpp w:\gfx\tga.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\general\texture.cpp -fo=w:\general\texture.obj
+
+$(SYSPATH)\canvas.obj: $(SYSPATH)\canvas.cpp w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\general\canvas.cpp -fo=w:\general\canvas.obj
+
+$(SYSPATH)\sort.obj: $(SYSPATH)\sort.asm w:\general\var.inc
+	$(ASM) $(ASMFLAGS) $(ASMINCLUDE) w:\general\sort.asm w:\general\sort.obj
+
+$(SYSPATH)\main.obj: $(SYSPATH)\main.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(SYSPATH)\main.obj
+
+$(SYSPATH)\2d.obj: $(SYSPATH)\2d.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(SYSPATH)\2d.obj
+
+$(SYSPATH)\lists.obj: $(SYSPATH)\lists.cpp w:\gfx\tga.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\general\lists.cpp -fo=w:\general\lists.obj
+
+$(SYSPATH)\filters.obj: $(SYSPATH)\filters.cpp w:\general\filters.h w:\general\var.h w:\general\canvas.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\general\filters.cpp -fo=w:\general\filters.obj
+
+$(SYSPATH)\bln2.obj: $(SYSPATH)\bln2.asm w:\general\var.inc
+	$(ASM) $(ASMFLAGS) $(ASMINCLUDE) w:\general\bln2.asm w:\general\bln2.obj
+
+$(SYSPATH)\stars.obj: $(SYSPATH)\stars.cpp w:\general\var.h w:\general\stars.h w:\vectors\scn_run.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\general\stars.cpp -fo=w:\general\stars.obj
+
+
+
+######################################################################
+#library w:\render\render.lib
+
+RENOBJ= $(RENPATH)\t02.obj $(RENPATH)\t03_org.obj $(RENPATH)\t04_org.obj $(RENPATH)\t05.obj $(RENPATH)\t06_org.obj $(RENPATH)\t07_org.obj $(RENPATH)\t08_org.obj $(RENPATH)\t09_org.obj $(RENPATH)\t10_org.obj
+
+$(RENLIB): $(RENOBJ)
+	$(LIB) $(LIBFLAG) $(RENLIB) @w:\render\render.lnk
+
+$(RENPATH)\t02_org.obj: $(RENPATH)\t02_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $(RENPATH)\t02_org.asm $(RENPATH)\t02_org.obj
+
+$(RENPATH)\t02.obj: $(RENPATH)\t02.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $(RENPATH)\t02.asm $(RENPATH)\t02.obj
+
+$(RENPATH)\t03_org.obj: $(RENPATH)\t03_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $(RENPATH)\t03_org.asm $(RENPATH)\t03_org.obj
+
+$(RENPATH)\t04_org.obj: $(RENPATH)\t04_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t04_org.obj
+
+$(RENPATH)\t05_org.obj: $(RENPATH)\t05_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t05_org.obj
+
+$(RENPATH)\t05.obj: $(RENPATH)\t05.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t05.obj
+
+$(RENPATH)\t06_org.obj: $(RENPATH)\t06_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t06_org.obj
+
+$(RENPATH)\t07_org.obj: $(RENPATH)\t07_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t07_org.obj
+
+$(RENPATH)\t08_org.obj: $(RENPATH)\t08_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t08_org.obj
+
+$(RENPATH)\t09_org.obj: $(RENPATH)\t09_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t09_org.obj
+
+$(RENPATH)\t10_org.obj: $(RENPATH)\t10_org.asm $(SYSPATH)\var.inc
+	$(ASM) $(ASMFLAGS) $*.asm $(RENPATH)\t10_org.obj
+
+
+
+
+#######################################################################
+#Building w:\pak\...
+
+w:\pak\pak.obj: w:\pak\pak.cpp w:\pak\pak.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\pak\pak -fo=w:\pak\pak.obj
+
+w:\pak\pakit.obj: w:\pak\pakit.cpp w:\pak\pak.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\pak\pakit -fo=w:\pak\pakit.obj
+
+w:\pak\pakit.exe: w:\pak\pak.obj w:\pak\pakit.obj w:\general\var.obj w:\general\aquarium.obj
+	wlink $(EXEFLAGS) @w:\pak\pakit.lnk
+
+
+
+
+
+
+#######################################################################
+#Building w:\gfx\...
+
+GFXOBJ = $(GFXPATH)\tga.obj $(GFXPATH)\jpg.obj w:\divlibs\jpeg\libjpeg.lib
+
+$(GFXLIB): $(GFXOBJ)
+	$(LIB) $(LIBFLAG) $(GFXLIB) -+$?
+
+w:\gfx\tga.obj: w:\gfx\tga.cpp w:\gfx\tga.h w:\general\var.h w:\pak\pak.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\gfx\tga -fo=w:\gfx\tga.obj
+
+w:\gfx\jpg.obj: w:\gfx\jpg.cpp w:\gfx\jpg.h w:\general\var.h w:\pak\pak.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\gfx\jpg -fo=w:\gfx\jpg.obj
+
+
+
+
+
+######################################################################
+#library w:\plugins\plugins.lib
+
+w:\plugins\plugins.lib: w:\plugins\flare.obj w:\plugins\flr_draw.obj
+	$(LIB) $(LIBFLAGS) w:\plugins\plugins.lib @w:\plugins\plugins.lnk
+
+w:\plugins\flare.obj: w:\plugins\flare.cpp $(SYSPATH)\var.h w:\plugins\flare.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\plugins\flare.cpp -fo=w:\plugins\flare.obj
+
+w:\plugins\flr_draw.obj: w:\plugins\flr_draw.asm w:\plugins\flare.inc
+	$(ASM) $(ASMFLAGS) $(ASMINCLUDE) w:\plugins\flr_draw.asm w:\plugins\flr_draw.obj
+
+
+#######################################################################
+#Building w:\test\...
+
+w:\test\s.obj: w:\test\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\test\s -fo=w:\test\s.obj
+
+w:\callback.obj: w:\callback.asm w:\general\var.inc
+	$(ASM) $(ASMFLAGS) $(ASMINCLUDE) w:\callback.asm w:\callback.obj
+
+w:\test\s.exe: w:\test\s.obj w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\callback.obj w:\render\render.lib w:\plugins\plugins.lib
+	wlink $(EXEFLAGS) @w:\test\s.lnk
+
+w:\test\k.obj: w:\test\k.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h w:\plugins\flare.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\test\k -fo=w:\test\k.obj
+
+w:\test\k.exe: w:\test\k.obj w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\callback.obj w:\render\render.lib w:\plugins\plugins.lib
+	wlink $(EXEFLAGS) @w:\test\k.lnk
+
+w:\test\m.obj: w:\test\m.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\test\m -fo=w:\test\m.obj
+
+w:\test\m.exe: w:\test\m.obj w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\callback.obj w:\render\render.lib w:\plugins\plugins.lib
+	wlink $(EXEFLAGS) @w:\test\m.lnk
+
+
+############### Testing...
+x:\iii\part2\s.obj: x:\iii\part2\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part2\s -fo=x:\iii\part2\s.obj
+
+x:\iii\part2\s.exe: x:\iii\part2\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\iii\part2\1.obj x:\iii\part3\2.obj x:\iii\part5\5.obj x:\iii\part6\6.obj x:\iii\part7\7.obj x:\iii\part8\8.obj
+	wlink $(EXEFLAGS) @x:\iii\part2\s.lnk
+
+x:\iii\part2\1.obj: x:\iii\part2\1.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part2\1 -fo=x:\iii\part2\1.obj
+
+
+
+x:\iii\part3\s.obj: x:\iii\part3\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part3\s -fo=x:\iii\part3\s.obj
+
+x:\iii\part3\s.exe: x:\iii\part3\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\iii\part3\2.obj x:\iii\part5\5.obj x:\iii\part6\6.obj  x:\iii\part7\7.obj x:\iii\part8\8.obj
+	wlink $(EXEFLAGS) @x:\iii\part3\s.lnk
+
+x:\iii\part3\2.obj: x:\iii\part3\2.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part3\2 -fo=x:\iii\part3\2.obj
+
+
+
+x:\iii\part4\s.obj: x:\iii\part4\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part4\s -fo=x:\iii\part4\s.obj
+
+x:\iii\part4\s.exe: x:\iii\part4\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\iii\part4\3.obj x:\iii\part2\1.obj x:\iii\part3\2.obj x:\iii\part5\5.obj x:\iii\part6\6.obj x:\iii\part7\7.obj  x:\iii\part8\8.obj
+	wlink $(EXEFLAGS) @x:\iii\part4\s.lnk
+
+x:\iii\part4\3.obj: x:\iii\part4\3.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part4\3 -fo=x:\iii\part4\3.obj
+
+
+x:\iii\part5\s.obj: x:\iii\part5\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part5\s -fo=x:\iii\part5\s.obj
+
+x:\iii\part5\s.exe: x:\iii\part5\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\iii\part5\5.obj x:\iii\part6\6.obj x:\iii\part7\7.obj x:\iii\part8\8.obj
+	wlink $(EXEFLAGS) @x:\iii\part5\s.lnk
+
+x:\iii\part5\5.obj: x:\iii\part5\5.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part5\5 -fo=x:\iii\part5\5.obj
+
+
+x:\iii\part6\s.obj: x:\iii\part6\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part6\s -fo=x:\iii\part6\s.obj
+
+x:\iii\part6\s.exe: x:\iii\part6\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\iii\part6\6.obj x:\iii\part7\7.obj x:\iii\part8\8.obj
+	wlink $(EXEFLAGS) @x:\iii\part6\s.lnk
+
+x:\iii\part6\6.obj: x:\iii\part6\6.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part6\6 -fo=x:\iii\part6\6.obj
+
+
+x:\iii\part7\s.obj: x:\iii\part7\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part7\s -fo=x:\iii\part7\s.obj
+
+x:\iii\part7\s.exe: x:\iii\part7\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\iii\part7\7.obj  x:\iii\part8\8.obj
+	wlink $(EXEFLAGS) @x:\iii\part7\s.lnk
+
+x:\iii\part7\7.obj: x:\iii\part7\7.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part7\7 -fo=x:\iii\part7\7.obj
+
+
+
+x:\iii\part8\s.obj: x:\iii\part8\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part8\s -fo=x:\iii\part8\s.obj
+
+x:\iii\part8\s.exe: x:\iii\part8\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\iii\part8\8.obj
+	wlink $(EXEFLAGS) @x:\iii\part8\s.lnk
+
+x:\iii\part8\8.obj: x:\iii\part8\8.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\iii\part8\8 -fo=x:\iii\part8\8.obj
+
+
+
+
+x:\fast\1\s.obj: x:\fast\1\s.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\fast\1\s -fo=x:\fast\1\s.obj
+
+x:\fast\1\s.exe: x:\fast\1\s.obj w:\plugins\plugins.lib w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\render\render.lib x:\fast\1\1.obj
+	wlink $(EXEFLAGS) @x:\fast\1\s.lnk
+
+x:\fast\1\1.obj: x:\fast\1\1.cpp w:\vectors\scn_file.h w:\vectors\scn_run.h w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) x:\fast\1\1 -fo=x:\fast\1\1.obj
+
+
+#######################################################################
+#Building w:\capture\...
+
+w:\capture\c.obj: w:\capture\c.cpp w:\general\var.h w:\vectors\scn_file.h w:\pak\pak.h w:\capture\capture.h w:\capture\script.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\capture\c -fo=w:\capture\c.obj
+
+w:\capture\capture.obj: w:\capture\capture.cpp w:\general\var.h w:\capture\capture.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\capture\capture -fo=w:\capture\capture.obj
+
+w:\capture\script.obj: w:\capture\script.cpp w:\general\var.h w:\capture\script.h w:\clwo\lws.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) /w0 w:\capture\script -fo=w:\capture\script.obj
+
+w:\capture\c.exe: w:\capture\c.obj w:\capture\capture.obj w:\general\general.lib w:\vectors\vectors.lib w:\gfx\gfx.lib w:\pak\pak.obj w:\capture\script.obj w:\clwo\lws.obj w:\clwo\div.obj w:\clwo\lwo.obj w:\vectors\vectors.lib
+	wlink $(EXEFLAGS) @w:\capture\c.lnk
+
+
+

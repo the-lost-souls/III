@@ -1,0 +1,284 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 300
+PreviewFrameStep 1
+FramesPerSecond 6.000000
+
+AddNullObject Center
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 360 0 360 1 1 1
+  90 0 0 0 0
+  0 0 0 0 360 180 1 1 1
+  180 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  300 0 0 0 0
+EndBehavior 2
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -6.7 0 -0.09999999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -4.855 0 4.765 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  4.656613e-009 0 7.065 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  5.305 0 5.03 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  6.879999 0 -0.015 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  5.065 0 -5.06 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0.035 0 -7.449999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -5.035 0 -4.749999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -5.9 0 2.655 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -2.595 0 6.165 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  2.71 0 6.375 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  6.44 0 2.669999 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  6.274999 0 -3.035 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  2.445 0 -6.705001 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -2.315 0 -6.57 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject FLR1 00.0080 00000001 x;|flares|flare08.tga
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -6.16 0 -2.62 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject x:\object\glassbox.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 -93.3 -78.3 160.8 1 1 1
+  70 0 0 0 0
+  0 0 0 -140.362 -84.23148 278.4 1 1 1
+  150 0 0 0 0
+  0 0 0 0 0 360 1 1 1
+  200 0 0 0 0
+EndBehavior 2
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 0.500000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  -0.063866 4.795 -17 0.1 13.4 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+TargetObject 1
+ZoomFactor 3.200000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 0.000000 0.000000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 1.777778
+GridNumber 40
+GridSize 1.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

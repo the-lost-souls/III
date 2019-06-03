@@ -1,0 +1,6 @@
+x-fix risting p† "it ctrls you"
+x-priority p† glass=238 for fossen, 240 for speilrom
+x-priority p† flares=239 for fossen, 240 for speilrom
+x-fix roteringsfart p† blob, speilrom
+x-fix "automatic sizing" p† speilvegg
+x-fix motionblur-init. Bare 1 MBL-struktur.

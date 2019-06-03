@@ -1,0 +1,20 @@
+PTC problems
+
+
+Under svgalib FAKEMODE1A, FAKEMODE1B and FAKEMODE1C do not restore correctly
+after the user switches back to the display from another virtual console.
+This is because svgalib doesnt properly support a 320x600 vga tweaked mode,
+which this fakemode needs, so PTC tweaks the 320x600 mode itself from
+320x200 mode13h. All other modes (including the other fakemodes) restore
+correctly after because they perform the modeset 100% through svgalib. To fix
+this problem support for 320x600 tweakmodes needs to be added to svgalib as
+G320x600x256. PTC is already setup to use this mode if it is #defined inside
+svgalib so somebody add it already :)
+
+Some users have been report problems with the DirectX support on some cards. 
+If you experience any problems with the DX support please email ptc@gaffer.org
+and describe the symptoms (or take a look through idirectx.cpp and see if you
+can find/fix it yourself).
+
+
+please report any other problems experienced to ptc@gaffer.org

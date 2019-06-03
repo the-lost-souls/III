@@ -1,0 +1,213 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 3392
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 10000
+PreviewFrameStep 1
+FramesPerSecond 300.000000
+
+LoadObject X:\demo\test\object\p_01.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  5
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  3.1 0 4.4 0 0 0 1 1 1
+  1740 0 0 0 0
+  -4.743671 0 -9.613599 0 0 0 1 1 1
+  3680 0 0 0 0
+  -7.091781 0 1.289423 0 0 0 1 1 1
+  5040 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  7200 0 0 0 0
+EndBehavior 2
+LockedChannels 2
+ShadowOptions 7
+
+LoadObject X:\demo\test\object\p_02.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  5
+  4.900001 0 4.5 0 0 0 1 1 1
+  0 0 0 0 0
+  -1.699999 0 6.6 -22.6 0 0 1 1 1
+  1800 0 0 0 0
+  4.900001 0 4.5 -57.45628 0 0 1 1 1
+  4220 0 0 0 0
+  4.900001 0 -5.5 -13.63979 0 0 1 1 1
+  5220 0 0 0 0
+  4.900001 0 4.5 0 0 0 1 1 1
+  7200 0 0 0 0
+EndBehavior 2
+LockedChannels 50
+ShadowOptions 7
+
+LoadObject X:\demo\test\object\p_03.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  5
+  0.3 0 -8.1 0 0 0 1 1 1
+  0 0 0 0 0
+  -5.3 0 -4.9 -9.701852 0 0 1 1 1
+  1960 0 0 0 0
+  0.3 0 -8.1 23.9 0 0 1 1 1
+  3680 0 0 0 0
+  0.3 0 3 27.12865 0 0 1 1 1
+  5520 0 0 0 0
+  0.3 0 -8.1 0 0 0 1 1 1
+  7200 0 0 0 0
+EndBehavior 2
+LockedChannels 50
+ShadowOptions 7
+
+LoadObject X:\demo\test\object\p_04.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  6
+  0 13.5 0 0 0 0 1 1 1
+  0 0 0 0 0
+  -10.91742 13.5 -9.330816 0 0 0 1 1 1
+  1060 0 0 0 0
+  1.786875 13.5 -13.7332 0 0 0 1 1 1
+  2740 0 0 0 0
+  -8.6 13.5 7.2 0 0 0 1 1 1
+  5060 0 0 0 0
+  11.05726 13.5 7.713546 0 0 0 1 1 1
+  5720 0 0 0 0
+  0 13.5 0 0 0 0 1 1 1
+  7200 0 0 0 0
+EndBehavior 2
+LockedChannels 2
+ShadowOptions 7
+
+LoadObject X:\demo\test\object\plate.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 41.8 0 0 90 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+ShadowOptions 7
+
+LoadObject X:\demo\test\object\bilde.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  -50 42.2 0 0 90 0 1 1 1
+  0 1 0 0 0
+  -50 42.2 0 0 90 0 1 1 1
+  1535 1 0 0 0
+  0 42.2 0 0 90 0 1 1 1
+  1536 1 0 0 0
+  0 42.2 0 0 90 0 1 1 1
+  1920 1 0 0 0
+EndBehavior 1
+LockedChannels 5
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.000000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity (envelope)
+  1
+  14
+  1
+  0 0 0 0 0
+  1
+  1536 1 0 0 0
+  0.7120002
+  1584 1 0 0 0
+  0.8000001
+  1602 0 0 0 0
+  0.8200001
+  1647 1 0 0 0
+  0.6000001
+  1678 1 0 0 0
+  0.744
+  1696 1 0 0 0
+  0.52
+  1728 1 0 0 0
+  0.62
+  1754 1 0 0 0
+  0.34
+  1777 0 0 0 0
+  0.4040001
+  1817 1 0 0 0
+  0.16
+  1835 1 0 0 0
+  0.236
+  1871 0 0 0 0
+  0
+  1920 1 0 0 0
+EndBehavior 1
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  0 45.6 0 0 90 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+ZoomFactor 3.200000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 50.100002 2.400000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 4.000000
+GridNumber 40
+GridSize 20.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

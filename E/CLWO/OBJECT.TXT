@@ -1,0 +1,91 @@
+Description for vector file-format.
+Last update 13.01.1998
+Cyberfish/TLS
+
+
+
+The first 65 bytes is a textstring if the file is typed
+from i.e. DOS-prompt. The 66th byte is an EOF-marker. From
+there chunks could be read.
+
+
+
+General chunkheader-format:
+
+ID		4 bytes		A four-character ID-string
+Chunklength	4 bytes		The length of the chunk,
+				not including the chunk-header itself.
+
+
+
+
+---------- [MAIN] - Main header
+currently 28 bytes
+
+00	DD Version	Version nr. of the converter that
+			created the file. (100 = version 1.00,
+			666 = version 6.66, etc)
+
+04	DD ObjectType	Objecttype. See MAIN.DOC for definitions.
+
+08	DD FileSize     Total filesize in bytes.
+
+12  	DD Checksum	File checksum. Calculated as the
+			sum of all unsigned bytes in the file, except the
+			checksum itself.
+
+16  	DD Vertices	Number of vertices
+20	DD Faces	Number of faces
+24	DD Materials	Number of materials
+
+
+
+
+
+
+---------- [VERT] - Object's vertexes
+12 bytes each vertice
+
+00  	DD X3D		FP: 3D X-value
+04  	DD Y3D          FP: 3D Y-value
+08  	DD Z3D          FP: 3D Z-value
+
+
+
+
+---------- [POLS] - Object's polygons (triangles/faces/whatever)
+40 bytes each polygon
+
+00	DD Vert0	int: Vertex 0 \
+04	DD Vert1        int: Vertex 1  index in vertexlist
+08	DD Vert2        int: Vertex 2 /
+
+12	DD U0           Mappingcoordinates (FP)
+16	DD V0
+20	DD U1
+24	DD V1
+28	DD U2
+32	DD V2
+
+36	DD Material	Index in materiallist
+
+
+
+---------- [MATR] - Object's materials
+each material is 32 bytes + subchunkheader +
+length(filename)
+
+
+---------- [MSPC] (subchunk)
+
+00	DD R		The object's color
+04	DD G
+08	DD B
+12	DD Luminosity   FP: Luminosity/ambient, range 0-1
+16	DD Diffuse      FP: Diffuse, range 0-1
+20	DD Transparency FP: Material's transparency, range 0-1
+24	DD TextOffset 	int: Offset in file to load texture
+28	DD Textsize 	int: Filesize of texture
+32	DB TextureFile  Textstring with the filename (0-term)
+
+

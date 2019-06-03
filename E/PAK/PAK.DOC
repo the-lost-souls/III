@@ -1,0 +1,21 @@
+Description for PAK-system
+Last update: 08.06.1998
+
+Cyberfish of The Lost Souls
+
+The PAK-system is a simple archivesystem currently using ZLIB as
+compressionlibrary. A number of files can be gathered into a single
+compressed archive and read from there.
+
+
+
+ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+³ PAKFile layout   ³
+ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÁÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+
+The first section of a PAK-file is the header. It contains general info
+about the PAK, including a pointer to the filemap. The filemap is
+compressed block array of PAK_FILE_BlockInfo's, and can be read as a
+standard array. After decompressed, this array is used to locate and
+read each file from within the PAK.
+

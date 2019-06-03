@@ -1,0 +1,9 @@
+"demostuf" skal substes som X:
+"E" skal substes som W:
+makefila p† w: m† endres target'ene. Target'en for †
+kompilere hele demoen er x:\iii\part4\s.exe
+
+trenger watcom11 og tasm50.
+
+Cyberfish
+06.03.1999

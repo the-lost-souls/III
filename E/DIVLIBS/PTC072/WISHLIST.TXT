@@ -1,0 +1,40 @@
+PTC wishlist
+
+
+Banked mode support for VESA and SVGALIB. email ptc@gaffer.org if you are
+interested in working on this and i will assist you.
+
+Stabilized DirectX support. Problems have been reported on some win32 systems 
+that need to be fixed. If you experience problems with PTC DirectX please 
+email ptc@gaffer.org with a description of the problem. Even better, try 
+looking over the DirectX code and send the bugfixes to ptc@gaffer.org :)
+
+Support for additional platforms such as X11, GGI, BeOS etc. If you are an
+experienced graphics programmer and would like to contribute by adding
+support for a platform please email ptc@gaffer.org and i will provide you with
+all the information and assistance you need.
+
+More example and demo programs. If you write something cool and simple using 
+PTC like a nice demo effect, please contribute it so others can learn from 
+your code
+
+Optimal pentium pixel format conversion routines: if you think you are pretty 
+hot at x86 assembly, take a look at /source/x86_*.asm. If you can speed up any 
+of these routines i'll give you a donut :)
+
+New pixel format conversion routines optimized for ppro/p2, MMX. This is quite
+a task... quite a bit of assembly language is required :)
+
+Support for new image loaders. Image loading support is quite basic in PTC at 
+the moment, only simple TGA loading is supported. Anyone want to add support 
+for other image formats? (png, gif, jpg, pcx, bmp to name a few...). Note: all 
+image loaders must load through the "File" class instead of the standard file 
+i/o routines. This is so image files can be read transparently from pack files, 
+directories and resources transparently. Unfortunately this makes it hard to
+use 3rd party image loading libraries...
+
+A mailing list for PTC developers to communicate. Can anyone help out with
+this? :)
+
+
+Email comments, requests and submissions to ptc@gaffer.org

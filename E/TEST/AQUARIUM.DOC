@@ -1,0 +1,131 @@
+Cyberfish/TLS
+19.02.1998
+
+To convert:	clws scene.lws
+
+To run:		s scene
+
+simple, ey?
+
+
+The different types of vectors may be set up as follows. The higher ones
+override the types under. That means if you first set up an object with
+a standard tmap, and then sets the transparent factor to 50%, the object
+will be transparent, not texturemapped.
+
+MARK: Textures may be 15/16/24 bits. Not 32.
+
+
+
+
+[ GLASS BUMPMAP (type 12) ]
+
+Set the transparent-factor to something non-zero and add a bumpmap.
+
+MARK: Transparent/glass-objects should not intersect each other. This
+will give strange results. There may be several glass-objects in a
+scene, but if they intersect each other 2D (on the screen, i.e. behind
+each other in 3D), the result will be...hmm...not what you're
+expecting.
+
+
+
+
+[ TRANSPARENCY + ENVIRONMENTMAP ]
+
+Set the transparent-factor to something non-zero. Add an environmentmap.
+
+MARK: Two transparent objects intersecting each other, will not be
+intersected right. Tag the "Additive" box to get additive transparency.
+
+
+
+
+[ ENVIRONMENT MAPPED (type 13) ]
+
+Set the reflectivity-factor to something non-zero. Then
+select "Reflection Options". Choose "Spherical blabalal" and set a
+reflection image.
+
+MARK: Transparency must be 0.
+
+
+[ TRANSPARENT COLORMAP ]
+
+Set the transparencty-factor to something non-zero. Add a standard
+colormap. Tag the "Additive" box to get additive transparency.
+
+
+
+[ COLORMAP ]
+
+Add a standard colormap.
+
+
+[ TRANSPARENT ]
+
+Set the transparency-factor to something non-zero.
+
+
+
+[ GLASS (type 21) ]
+
+If the transparency factor is non-zero, and there is a Transparent
+Texture, the object will be glass-bumped. The transparency-factor still
+works.
+
+
+
+
+[ FLATFILLED (type 5) ]
+
+Just do none of the above. You may set the colour.
+
+
+MARK:
+
+
+
+[ LENSFLARES, LIGHTS ]
+
+Tag the LensFlare box. Set up the light's name as follows:
+
+FLR1 00.0500 c;|flares|theflare.tga
+
+* There MUST be a space between "FLR1" and the size-value.
+* The sizevalue MUST follow the structure above. To digits before "."
+  and four after.
+* Another space between the size and the filename.
+* All :'s must be written as ;'s.
+* All \'s must be written as |'s.
+
+* Fade behind objects works
+* Fade off screen works
+* !!!Anamorphic distort!!! Pressing this button enables fading with
+  light (spot/distant). Has nothing to do with "anamorphic distortion".
+  :)
+
+The light's color is used to saturate the lensflare.
+
+
+
+
+[ LENSFLARES, OBJECTS ]
+
+Create a nullobject. Set up the nullobject's name as follows:
+
+FLR1 00.0500 00000000 c;|flares|theflare.tga
+
+* There MUST be a space between "FLR1" and the size-value.
+* The sizevalue MUST follow the structure above. To digits before "."
+  and four after.
+* 8 digits represent different flags (flag 0 = rightmost, flag 7 =
+  leftmost).
+  	0: Set to 1, if fade behind object.
+	1: Set to 1, if fade off screen
+	2: Set to 1, if fade with light (spot/distant light)
+
+* Another space between the flags and the filename.
+* All :'s must be written as ;'s.
+* All \'s must be written as |'s.
+

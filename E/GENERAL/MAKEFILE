@@ -1,0 +1,36 @@
+#######################################################################
+#Programs used:
+
+CPP = wpp386.exe
+ASM = tasm.exe
+LIB = wlib.exe
+EXE = wlink.exe
+
+#######################################################################
+#Program flags
+
+CPPFLAGS = -d2
+ASMFLAGS = /m4 /ml /zi
+LIBFLAGS =
+CPPINCLUDE = -ic:\code\prog\watcom11\h
+EXEFLAGS = debug dwarf
+
+
+#######################################################################
+#
+#Start of library dependencies
+#
+#######################################################################
+
+pak.exe: pak.obj
+	wlink $(EXEFLAGS) file pak.obj
+
+pak.obj: pak.cpp pak.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) pak -fo=w:\general\pak.obj
+
+
+
+
+
+
+

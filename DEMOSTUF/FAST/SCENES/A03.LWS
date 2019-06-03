@@ -1,0 +1,310 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 10000
+PreviewFrameStep 1
+FramesPerSecond 200.000000
+
+LoadObject X:\FAST\OBJECTS\ag_body.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 3 0 0 0 20 1 1 1
+  83 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+LockedChannels 40
+ParentObject 4
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ag_oye.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  -8.199995 16.6 2.599999 -46.2 -15.4 0 1 1 1
+  0 0 0 0 0
+  -8.199995 16.6 2.599999 35.6 -22.8 0 1 1 1
+  380 0 0 0 0
+  -8.199995 16.6 2.599999 6.700002 -1.999999 30.49999 1 1 1
+  1081 0 0 0 0
+  -8.199995 16.6 2.599999 -18.7 -1.9 13.09999 1 1 1
+  1461 0 0 0 0
+EndBehavior 2
+ParentObject 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ag_oye.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  -8.199995 16.6 -3.800001 -46.2 -15.4 0 1 1 1
+  0 0 0 0 0
+  -8.199995 16.6 -3.511844 35.6 -22.8 0 1 1 1
+  380 0 0 0 0
+  -8.199995 16.6 -3.798313 6.700002 -1.999999 30.49999 1 1 1
+  1081 0 0 0 0
+  -8.199995 16.6 -4.64479 -18.7 -1.9 13.09999 1 1 1
+  1461 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ParentObject 1
+ShadowOptions 7
+
+AddNullObject Main Agurk Null
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 36.50001 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0.3 8.299999 6.399998 -90 -60 0 1 1 1
+  0 0 0 0 0
+  0.3 8.299999 6.399998 -89.49993 54.50001 36.40001 1 1 1
+  83 0 0 0 0
+  0.3 8.299999 6.399998 -90 -60 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+ParentObject 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 16.89999 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 16.89999 0 -77.60001 0 1 1 1
+  83 0 0 0 0
+  0 0 16.89999 0 0 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+LockedChannels 43
+ParentObject 5
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 8.500001 -7.29999 -90 60 0 1 1 1
+  0 0 0 0 0
+  0 8.500001 -7.29999 -90 -60 0 1 1 1
+  83 0 0 0 0
+  0 8.500001 -7.29999 -90 60 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+ParentObject 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 -0.1000009 17.7 0 0 0 1 1 1
+  0 0 0 0 0
+  0 -0.1000009 17.7 0 45 0 1 1 1
+  83 0 0 0 0
+  0 -0.1000009 17.7 0 0 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+ParentObject 7
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 -21.4 5.499993 0 5.399994 0 1 1 1
+  0 0 0 0 0
+  0 -21.4 5.499993 0 22.99997 0 1 1 1
+  83 0 0 0 0
+  0 -21.4 5.499993 0 6.999962 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+LockedChannels 40
+ParentObject 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 -1.490116e-008 17.39999 0 46.2 0 1 1 1
+  0 0 0 0 0
+  0 -1.490116e-008 17.39999 0 28.8 0 1 1 1
+  83 0 0 0 0
+  0 -1.490116e-008 17.39999 0 42.49999 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+LockedChannels 40
+ParentObject 9
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 -21.5 -4.999998 180 6.300003 0 1 1 1
+  0 0 0 0 0
+  0 -21.5 -4.999998 180 17.3 0 1 1 1
+  83 0 0 0 0
+  0 -21.5 -4.999998 180 0 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+LockedChannels 40
+ParentObject 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\ledd.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 -3.72529e-007 17.5 0 41.20002 0 1 1 1
+  0 0 0 0 0
+  0 -3.72529e-007 17.5 0 43.5 0 1 1 1
+  83 0 0 0 0
+  0 -3.72529e-007 17.5 0 57.00001 0 1 1 1
+  166 0 0 0 0
+EndBehavior 2
+LockedChannels 40
+ParentObject 11
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\floor.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\object\speaker.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  28.7 5 -37.5 -39.2 0 0 1 1 1
+  0 0 0 0 0
+  28.7 0 -37.5 -39.2 0 0 1 1 1
+  42 1 0 0 0
+  28.7 5 -37.5 -39.2 0 0 1 1 1
+  83 1 0 0 0
+EndBehavior 2
+LockedChannels 48
+ShadowOptions 7
+
+LoadObject X:\object\speaker.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  29.6 0 49 230 0 0 1 1 1
+  0 0 0 0 0
+  29.6 5 49 230 0 0 1 1 1
+  42 1 0 0 0
+  29.6 0 49 230 0 0 1 1 1
+  83 1 0 0 0
+EndBehavior 2
+LockedChannels 48
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  5
+  -48.79565 54.09999 -38.7139 52.69999 16.79999 0 1 1 1
+  0 0 0 0 0
+  -123.3242 54.52053 -12.08542 87.39406 10.85373 1.632941 1 1 1
+  423 0 0 0 0
+  -29.19278 30.39031 37.75435 91.82693 8.303769 1.539587 1 1 1
+  2119 0 0 0 0
+  78.3065 21.99288 28.14962 262.4615 -8.951367 1.23686 1 1 1
+  3801 0 0 0 0
+  -150 0 0 90 0 0 1 1 1
+  10000 0 0 0 0
+EndBehavior 1
+ZoomFactor 3.200000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 0.000000 0.000000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 2.666667
+GridNumber 10
+GridSize 20.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

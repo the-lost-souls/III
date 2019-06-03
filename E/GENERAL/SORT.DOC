@@ -1,0 +1,68 @@
+---------------------------------- Radixsort -------------------------------
+
+       The principles of radix sort is rather simple. First you take the first
+radix, here a byte. A byte can have 256 different values, and depending on
+this value, you place the polygon (or the pointer) in the corresponding
+array. After sorted all the values by first radix, you do the same with the
+next (you have to use the array already sorted with the first radix).
+
+Data used :
+
+Start1           DD 256 DUP (?)        ;The start-offsets of all lists
+Start2           DD 256 DUP (?)        ;/
+End1             DD 256 DUP (?)        ;The end-offsets of all lists
+End2             DD 256 DUP (?)        ;/
+
+
+Endx[0000] = OFFSET Startx[0000]
+Endx[0001] = OFFSET Startx[0001]
+.
+.
+.
+.
+
+Endx[0255] = OFFSET Startx[0255]
+
+
+
+Radix sort by example :
+
+* You are about sort part 'p' into an array
+* You read a radix (byte) and it has the value 8
+* The last polygon in list nr. 8 has offset 800h
+* The offset of the new polygon is 1000h
+* You set the offset at [ Endx[0008] to 1000h
+* You update the array Endx[0008] to point to the new polygon
+
+mov   ebx, End1[0008*4]            ;Load offset to end of list (bx = 800h)
+mov   [ebx], 1000h                 ;Set pointer in polygon
+mov   End1[0008*4], 1000h          ;Update the end-array
+
+The pointer in polygon at [0800h] now points to the polygon at [1000h].
+Also the pointer in End1[0008] points to [1000h] and is ready to add
+another polygon.
+
+
+
+       FStartOffsets                                FOffsets
+------------------------------            ------------------------------
+|0|1|2|3|4|5|6|7|8|9|...|255|             |0|1|2|3|4|5|6|7|8|9|...|255|
+               |                                           |
+               |                                           |
+ |--------------                                           |---------|
+ |                                                                   |
+ |->    800h          |----->    1000h        |----->  xxxxh      <---
+    |-----------|     |      |-----------|    |      |-----------|
+    |Ptr: 1000h | ----|      |Ptr: xxxxh |----|      |Ptr:       |
+    |Value:  08 |            |Value:  08 |           |Value:  08 |
+    |-----------|            |-----------|           |-----------|
+    |           |            |           |           |           |
+    |-----------|            |-----------|           |-----------|
+
+
+Nice drawing! :)))
+CF
+
+
+
+

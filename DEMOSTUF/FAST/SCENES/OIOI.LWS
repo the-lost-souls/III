@@ -1,0 +1,186 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+PreviewFirstFrame 0
+PreviewLastFrame 700
+PreviewFrameStep 1
+FramesPerSecond 80.000000
+
+LoadObject X:\FAST\OBJECTS\gloss.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  263 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  426 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  700 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\gross.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  263 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  426 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  700 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\grloss.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  263 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  426 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  700 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\text1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0.25 19.25 109.5 0 0 0 1 1 1
+  0 0 0 0 0
+  0.25 19.25 109.5 0 0 0 1 1 1
+  263 0 0 0 0
+  0.25 19.25 109.5 0 0 0 1 1 1
+  426 0 0 0 0
+  0.25 19.25 109.5 0 0 0 1 1 1
+  700 0 0 0 0
+EndBehavior 1
+ParentObject 6
+ShadowOptions 7
+
+LoadObject X:\FAST\OBJECTS\text2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  0 49 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 49 0 0 0 0 1 1 1
+  263 0 0 0 0
+  0 49 0 0 0 0 1 1 1
+  426 0 0 0 0
+  0 49 0 0 0 0 1 1 1
+  700 0 0 0 0
+EndBehavior 1
+ParentObject 4
+ShadowOptions 7
+
+AddNullObject Main camera null
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  -118.7598 227.25 119.7715 -219.8 57.7 0 1 1 1
+  0 0 0 0 0
+  -214.4888 197.5 -93.63559 -290.2998 43.00004 0 1 1 1
+  263 0 0 0 0
+  33.07636 362 -125.7414 -366.1998 78.10002 0 1 1 1
+  426 0 0 0 0
+  -26.39379 217.75 -106.6753 -368.3997 65.00003 -71.80001 1 1 1
+  700 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  4
+  -2 2 -2 45 35 0 1 1 1
+  0 0 0 0 0
+  -2 2 -2 45 35 0 1 1 1
+  263 0 0 0 0
+  -2 2 -2 45 35 0 1 1 1
+  426 0 0 0 0
+  -2 2 -2 45 35 0 1 1 1
+  700 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  4
+  0 -24 -109 0 0 0 1 1 1
+  0 0 0 0 0
+  0 -24 -109 0 0 0 1 1 1
+  263 0 0 0 0
+  0 -24 -109 0 0 0 1 1 1
+  426 0 0 0 0
+  0 -24 -109 0 0 0 1 1 1
+  700 0 0 0 0
+EndBehavior 2
+ParentObject 5
+ZoomFactor 3.200000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint -8.017920 0.000000 13.220267
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 1.993005
+GridNumber 10
+GridSize 50.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

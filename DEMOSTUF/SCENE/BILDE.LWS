@@ -1,0 +1,341 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 6000
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 6000
+PreviewFrameStep 1
+FramesPerSecond 200.000000
+
+LoadObject X:\OBJECT\gplate4.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 11.75 0 0 0 1 1 1
+  0 1 0 0 0
+EndBehavior 1
+LockedChannels 3
+ShadowOptions 7
+
+LoadObject X:\OBJECT\plate1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  10
+  0 0.027 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0.035 0.04100001 0.04299999 0 0 0 1 1 1
+  1 0 0 0 0
+  -0.002999997 0 -0.02999999 0 0 0 1 1 1
+  2 0 0 0 0
+  0.015 -0.018 0.007 0 0 0 1 1 1
+  3 0 0 0 0
+  -0.013 0.009000001 -0.005 0 0 0 1 1 1
+  4 0 0 0 0
+  0.03899999 -0.007 0.002 0 0 0 1 1 1
+  5 0 0 0 0
+  0.011 0.008 0.015 0 0 0 1 1 1
+  6 0 0 0 0
+  -0.017 0.018 -0.013 0 0 0 1 1 1
+  7 0 0 0 0
+  0.016 -0.004000001 -0.003 0 0 0 1 1 1
+  8 0 0 0 0
+  0.002 0.015 0.02 0 0 0 1 1 1
+  9 0 0 0 0
+EndBehavior 2
+ParentObject 8
+ShadowOptions 7
+
+LoadObject X:\OBJECT\plate2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  10
+  0 0.027 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0.0216 -0.03099999 -0.07880001 0 0 0 1 1 1
+  1 0 0 0 0
+  -0.009399997 -0.0001999998 0.02520001 0 0 0 1 1 1
+  2 0 0 0 0
+  0.0378 -0.0142 0.031 0 0 0 1 1 1
+  3 0 0 0 0
+  -0.0166 0.0184 -0.0342 0 0 0 1 1 1
+  4 0 0 0 0
+  0.004599992 -0.013 0.047 0 0 0 1 1 1
+  5 0 0 0 0
+  0.0308 0.0524 -0.006599999 0 0 0 1 1 1
+  6 0 0 0 0
+  -0.025 0.018 0.0482 0 0 0 1 1 1
+  7 0 0 0 0
+  0.016 -0.0428 -0.003 0 0 0 1 1 1
+  8 0 0 0 0
+  0.002 0.015 0.02 0 0 0 1 1 1
+  9 0 0 0 0
+EndBehavior 2
+ParentObject 9
+ShadowOptions 7
+
+LoadObject X:\OBJECT\plate3.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  10
+  0 0.027 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0.006600001 0.006200011 0.04299999 0 0 0 1 1 1
+  1 0 0 0 0
+  -0.002999997 0.0088 -0.01719999 0 0 0 1 1 1
+  2 0 0 0 0
+  0.0222 0.0236 0.0222 0 0 0 1 1 1
+  3 0 0 0 0
+  -0.013 -0.008599998 0.007399999 0 0 0 1 1 1
+  4 0 0 0 0
+  -0.01740001 0.006999999 0.0276 0 0 0 1 1 1
+  5 0 0 0 0
+  0.011 -0.0108 -0.007400001 0 0 0 1 1 1
+  6 0 0 0 0
+  -0.017 0.018 0.0134 0 0 0 1 1 1
+  7 0 0 0 0
+  0.0216 -0.004000001 -0.003 0 0 0 1 1 1
+  8 0 0 0 0
+  -0.0003999999 0.015 0.02 0 0 0 1 1 1
+  9 0 0 0 0
+EndBehavior 2
+ParentObject 10
+ShadowOptions 7
+
+LoadObject X:\OBJECT\plate11.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  10
+  0 -0.027 0 0 0 0 1 1 1
+  0 0 0 0 0
+  -0.035 -0.04100001 0.04299999 0 0 0 1 1 1
+  1 0 0 0 0
+  0.002999997 0 -0.02999999 0 0 0 1 1 1
+  2 0 0 0 0
+  -0.015 0.018 0.007 0 0 0 1 1 1
+  3 0 0 0 0
+  0.013 -0.009000001 -0.005 0 0 0 1 1 1
+  4 0 0 0 0
+  -0.03899999 0.007 0.002 0 0 0 1 1 1
+  5 0 0 0 0
+  -0.011 -0.008 0.015 0 0 0 1 1 1
+  6 0 0 0 0
+  0.017 -0.018 -0.013 0 0 0 1 1 1
+  7 0 0 0 0
+  -0.016 0.004000001 -0.003 0 0 0 1 1 1
+  8 0 0 0 0
+  -0.002 -0.015 0.02 0 0 0 1 1 1
+  9 0 0 0 0
+EndBehavior 2
+ParentObject 8
+ShadowOptions 7
+
+LoadObject X:\OBJECT\plate21.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  10
+  0 0.027 0 0 0 0 1 1 1
+  0 0 0 0 0
+  -0.035 0.04100001 0.04299999 0 0 0 1 1 1
+  1 0 0 0 0
+  0.002999997 0 -0.02999999 0 0 0 1 1 1
+  2 0 0 0 0
+  -0.015 -0.018 0.007 0 0 0 1 1 1
+  3 0 0 0 0
+  0.013 0.009000001 -0.005 0 0 0 1 1 1
+  4 0 0 0 0
+  -0.03899999 -0.007 0.002 0 0 0 1 1 1
+  5 0 0 0 0
+  -0.011 0.008 0.015 0 0 0 1 1 1
+  6 0 0 0 0
+  0.017 0.018 -0.013 0 0 0 1 1 1
+  7 0 0 0 0
+  -0.016 -0.004000001 -0.003 0 0 0 1 1 1
+  8 0 0 0 0
+  -0.002 0.015 0.02 0 0 0 1 1 1
+  9 0 0 0 0
+EndBehavior 2
+ParentObject 9
+ShadowOptions 7
+
+LoadObject X:\OBJECT\plate31.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  10
+  0 -0.027 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0.035 -0.04100001 -0.04299999 0 0 0 1 1 1
+  1 0 0 0 0
+  -0.002999997 0 0.02999999 0 0 0 1 1 1
+  2 0 0 0 0
+  0.015 0.018 -0.007 0 0 0 1 1 1
+  3 0 0 0 0
+  -0.013 -0.009000001 0.005 0 0 0 1 1 1
+  4 0 0 0 0
+  0.03899999 0.007 -0.002 0 0 0 1 1 1
+  5 0 0 0 0
+  0.011 -0.008 -0.015 0 0 0 1 1 1
+  6 0 0 0 0
+  -0.017 -0.018 0.013 0 0 0 1 1 1
+  7 0 0 0 0
+  0.016 0.004000001 0.003 0 0 0 1 1 1
+  8 0 0 0 0
+  0.002 -0.015 -0.02 0 0 0 1 1 1
+  9 0 0 0 0
+EndBehavior 2
+ParentObject 10
+ShadowOptions 7
+
+AddNullObject Plate1 null
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.75 0.75 11.25 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 3
+ShadowOptions 7
+
+AddNullObject Plate2 null
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 9 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ShadowOptions 7
+
+AddNullObject Plate3 null
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -0.75 -0.75 10.75 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.000000
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity (envelope)
+  1
+  10
+  0.2732001
+  0 1 0 0 0
+  0.2312
+  1 1 0 0 0
+  0.29
+  2 1 0 0 0
+  0.1976004
+  3 1 0 0 0
+  0.3110003
+  4 1 0 0 0
+  0.2594
+  5 1 0 0 0
+  0.2864
+  6 1 0 0 0
+  0.2312001
+  7 1 0 0 0
+  0.2728
+  8 1 0 0 0
+  0.2298
+  9 1 0 0 0
+EndBehavior 2
+LightType 0
+ShadowType 1
+
+AddLight
+LightName Light
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -2 2 -2 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity (envelope)
+  1
+  4
+  0
+  0 0 0 0 0
+  0.2
+  100 0 0 0 0
+  0.8
+  250 0 0 0 0
+  0
+  450 0 0 0 0
+EndBehavior 1
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 32
+ZoomFactor 10.000000
+Resolution 1
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+DataOverlayLabel  
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 0.000000 0.000000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 30.374994
+GridNumber 40
+GridSize 50.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

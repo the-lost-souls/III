@@ -1,0 +1,39 @@
+#######################################################################
+#Programs used:
+
+CPP = wpp386.exe
+ASM = tasm.exe
+LIB = wlib.exe
+EXE = wlink.exe
+
+#######################################################################
+#Program flags
+
+CPPFLAGS = -d2
+ASMFLAGS = /m4 /ml /zi
+LIBFLAGS =
+CPPINCLUDE = -ic:\code\prog\watcom11\h
+EXEFLAGS = debug dwarf
+
+
+#######################################################################
+#
+#Start of library dependencies
+#
+#######################################################################
+
+pak.exe: pak.obj w:\general\aquarium.obj w:\general\var.obj
+	wlink $(EXEFLAGS) file pak.obj, w:\divlibs\zlib\zlib.lib, w:\general\var.obj, w:\general\aquarium.obj
+
+pak.obj: pak.cpp pak.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) pak -fo=w:\pak\pak.obj
+
+w:\general\aquarium.obj: w:\general\aquarium.cpp w:\general\var.h
+	$(CPP) $(CPPFLAGS) $(CPPINCLUDE) w:\general\aquarium.cpp -fo=w:\general\aquarium.obj
+
+
+
+
+
+
+

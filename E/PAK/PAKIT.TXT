@@ -1,0 +1,9 @@
+PAK_Create filnavn
+	Lager ny fil, overskriver eventuelle eksisterende
+med samme navn. pner den med det samme.
+
+PAK_Open filnavn
+	pner en fil uten † slette den.
+
+PAK_AddFile filnavn
+	Legger til en fil.

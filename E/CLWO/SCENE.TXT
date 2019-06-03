@@ -1,0 +1,113 @@
+Description for the scene fileformat.
+Last update 17.02.1998
+Cyberfish/TLS
+
+
+
+
+Each keyframe is saved as follows...
+
+Keyframe6     STRUCT
+	 	DD Frame	Framenumber
+
+		DD Tension	FP-Values to adjust curve. range -1..1
+		DD Continuity
+		DD Bias
+
+		DD Linear	0 = curved, 1 = linear
+
+		DD XPos		Position and angle
+		DD YPos
+		DD ZPos
+		DD XAngle
+		DD YAngle
+		DD ZAngle
+
+	      ENDS
+
+
+Keyframe1     STRUCT
+		DD Frame	Framenumber
+
+		DD Tension	FP-Values to adjust curve. range -1..1
+		DD Continuity
+		DD Bias
+
+		DD Linear	0 = curved, 1 = linear
+
+		DD Value	FP-value to be interpolated
+
+	      ENDS
+
+
+
+
+---------- [SCEN] - Scene-header.
+currently 32 bytes
+
+	DD Version
+	DD FileSize
+	DD Checksum
+	DD NrObjects		Number of objects
+	DD NrLights		Number of lights
+	DD FirstFrame		Number of the first frame
+	DD LastFrame		Number of the last frame
+	DD FramesPerSecond	Frames per second in animation
+
+
+
+---------- [VOBJ] - Vector object
+	DD XPivot		FP: Offset from objects original position
+	DD YPivot 		/
+	DD ZPivot		/
+
+	DD EndBehavior		int
+	DD ParentObject		int, -1 = none, else objectnumber
+	DD PathAlignment	0 = nope, >0 = number of frames
+	DD NrKeyFrames		int
+	   KeyFrameData		n keyframes as described at the top
+
+	DD FileOffset		Offset in file to load object from,
+				-1 if nullobject
+	DD ObjectPath		Path to objectfile
+
+
+---------- [LGHT] - Light
+	DD Type			0 = distant, 1 = point, 2 = spot
+
+	DD R			FP-color (range 0..1)
+	DD G			/
+	DD B			/
+
+	DD Range                FP
+	DD Intensity		FP
+
+	DD ConeAngle		FP
+	DD EdgeAngle		FP
+
+	DD EndBehavior		int
+	DD ParentObject		int
+	DD PathAlignment	int
+
+	DD NrKeyFrames		int
+	   KeyFrameData		n keyframes as described at the top
+
+
+---------- [LINT] [LRNG] [LCON] [LEDG] (Div plugins for lights)
+
+	DD EndBehavior
+	DD NrKeyFrames
+	   KeyFrameData		KeyFrame2!!!
+
+
+
+
+---------- [CAMR] - Camera
+	DD EndBehavior
+	DD ParentObject
+	DD PathAlignment
+	DD TargetObject
+
+	DD NrKeyFrames		int
+	   KeyFrameData		n keyframes as described at the top
+

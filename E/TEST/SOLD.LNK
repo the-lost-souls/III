@@ -1,0 +1,16 @@
+option caseexact
+option stack=65536
+name w:\test\s.exe
+file w:\test\s.obj
+file w:\general\general.lib
+file w:\divlibs\zlib\zlib.lib
+file w:\divlibs\midas112\lib\dos\wcretail\midas.lib
+file w:\render\render.lib
+file w:\vectors\vectors.lib
+file w:\gfx\gfx.lib
+file w:\pak\pak.obj
+file w:\callback.obj
+file w:\divlibs\ptc072\library\dos\wc11.0\release.lib
+file w:\plugins\plugins.lib
+
+

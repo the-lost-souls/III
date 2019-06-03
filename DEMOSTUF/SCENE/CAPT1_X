@@ -1,0 +1,21 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 60
+FrameStep 1
+FramesPerSecond 30.000000
+
+LoadObject X:\mot_cap\object\ballred.lwo
+ShowObject 7 7
+ObjectMotion (unnamed)
+  9
+  3
+  -8.000003 0 -7.98 0 0 0 1 1 1
+  0 0 0 0 0
+  8.089996 0 8.039999 0 0 0 1 1 1
+  30 0 0 0 0
+  -8.000002 0 7.989999 0 0 0 1 1 1
+  60 0 0 0 0
+EndBehavior 1
+ShadowOptions 7

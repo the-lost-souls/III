@@ -1,0 +1,1531 @@
+LWSC
+1
+
+FirstFrame 1
+LastFrame 4095
+FrameStep 1
+PreviewFirstFrame 1
+PreviewLastFrame 8192
+PreviewFrameStep 1
+FramesPerSecond 700.000000
+
+LoadObject X:\demo\watrfall\objects\tunneltm.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+Metamorph 1.000000
+MorphTarget 2
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\tunnelmt.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ObjDissolve 1.000000
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\pipe_mt.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ObjDissolve 1.000000
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\pipe_tm.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 65 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+Metamorph 1.000000
+MorphTarget 3
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\pipenuts.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 4
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\watrtm01.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 295 0 0 0 180 1 1 1
+  0 0 0 0 0
+EndBehavior 2
+LockedChannels 5
+Metamorph 1.000000
+MorphTarget 7
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\watrmt01.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+ParentObject 6
+ObjDissolve 1.000000
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\watrtm02.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 295 0 0 0 180 1 1 1
+  0 0 0 0 0
+EndBehavior 2
+LockedChannels 5
+Metamorph 1.000000
+MorphTarget 9
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\watrmt02.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 8
+ObjDissolve 1.000000
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\runstrm1.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 2395 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  1800 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  3600 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  3603 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  5490 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7290 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ParentObject 12
+ShadowOptions 7
+
+AddNullObject Flare foam move
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 50 0 0 0 0 1 1 1
+  3 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  6 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  1e-005 56 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  1800 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  1803 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3690 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 28
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  1e-005 56 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  1800 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  1803 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3690 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 29
+ShadowOptions 7
+
+AddNullObject Flare foam move
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 50 0 0 0 0 1 1 1
+  3 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  6 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  1800 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  3600 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  3603 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  5490 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7290 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ParentObject 30
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  1e-005 56 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  1800 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  1803 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3690 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 31
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  1800 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  3600 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  3603 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  5490 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7290 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 32
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\tunneltm.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 3200 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 3
+Metamorph 1.000000
+MorphTarget 2
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\object\lgrid.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -105 110 0 0 0 22.6 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 29
+ParentObject 1
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\spipetm.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 1
+Metamorph 1.000000
+MorphTarget 22
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\spipemt.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ObjDissolve 1.000000
+ShadowOptions 7
+
+LoadObject X:\object\lgrid.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -105 120 0 0 0 22.6 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 28
+ParentObject 19
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\spipetm.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 19
+Metamorph 1.000000
+MorphTarget 22
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\dif_watr.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\dif_watr.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 19
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\rwatr.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 20 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -30 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 50 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -60 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 70 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2700 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  5400 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  5403 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  8190 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  10890 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 38
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2880 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  5760 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  5763 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  8730 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  11610 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 39
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2160 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  4320 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  4323 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  6570 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  8730 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 40
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3600 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7200 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  7203 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  10980 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  14580 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 41
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2430 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  4950 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  4953 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  7650 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  10170 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 42
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 80 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -55 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -80 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 10 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -15 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 43
+ShadowOptions 7
+
+AddNullObject Null Target Camera Waterfall
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 -12.7 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 32.3 0 0 1 1 1
+  3 0 0 0 0
+  0 0 0 174.1001 0 0 1 1 1
+  6 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\pipe_tm.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 -65 0 0 0 180 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 5
+Metamorph 1.000000
+MorphTarget 3
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\DEMO\WATRFALL\OBJECTS\watrtm03.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 -295 0 0 0 180 1 1 1
+  0 0 0 0 0
+EndBehavior 2
+LockedChannels 5
+Metamorph 1.000000
+MorphTarget 7
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\DEMO\WATRFALL\OBJECTS\watrtm04.lwo
+ShowObject 4 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 180 1 1 1
+  0 0 0 0 0
+EndBehavior 2
+ParentObject 45
+Metamorph 1.000000
+MorphTarget 9
+MorphSurfaces 0
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 -80 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+AddNullObject Risteskumnull
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  9
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  1.440033 -0.3240004 0 45.56 0 0 1 1 1
+  300 1 0 0 0
+  -1.499908 -0.05999922 0 94.26998 0 0 1 1 1
+  600 1 0 0 0
+  1.860077 -0.4560002 0 149.67 0 0 1 1 1
+  990 1 0 0 0
+  -2.699982 0.4680004 0 182.23 0 0 1 1 1
+  1200 1 0 0 0
+  1.200073 -0.42 0 226.18 0 0 1 1 1
+  1500 1 0 0 0
+  -0.6599124 0.2640002 0 265.54 0 0 1 1 1
+  1800 1 0 0 0
+  1.980103 -0.648 0 306.01 0 0 1 1 1
+  2100 1 0 0 0
+  0.06005862 0 0 360 0 0 1 1 1
+  2400 1 0 0 0
+EndBehavior 2
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -70 0 10 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -5 0 90 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  100 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -85 0 -45 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -75 0 70 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  95 0 45 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  85 0 -35 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 2
+ParentObject 48
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\vannmap.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ParentObject 10
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  1800 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  3600 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  3603 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  5490 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7290 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ParentObject 58
+ShadowOptions 7
+
+AddNullObject Flare foam move
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+  0 50 0 0 0 0 1 1 1
+  3 0 0 0 0
+  0 0 0 0 0 0 1 1 1
+  6 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ParentObject 80
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  1e-005 56 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  1800 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  1803 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3690 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 64
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  1e-005 56 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  1800 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  1803 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3690 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 65
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  1800 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  3600 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  3603 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  5490 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7290 0 0 0 0
+EndBehavior 2
+LockedChannels 3
+ParentObject 66
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  4
+  1e-005 56 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  1800 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  1803 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3690 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 67
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  1800 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  3600 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  3603 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  5490 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7290 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 68
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 20 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -30 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 50 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -60 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 70 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2700 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  5400 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  5403 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  8190 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  10890 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 74
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2880 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  5760 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  5763 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  8730 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  11610 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 75
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2160 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  4320 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  4323 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  6570 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  8730 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 76
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  3600 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  7200 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  7203 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  10980 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  14580 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 77
+ShadowOptions 7
+
+AddNullObject FLR1 00.5000 00000001 x;|demo|watrfall|flares|foam04.jpg
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  6
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  0 0 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  2430 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  4950 0 0 0 0
+  1e-005 1 -80.2542 0 0 0 1 1 1
+  4953 1 0 0 0
+  9e-006 56 -74.30945 0 0 0 1 1 1
+  7650 0 0 0 0
+  7e-006 150 -59.44756 0 0 0 1 1 1
+  10170 0 0 0 0
+EndBehavior 2
+LockedChannels 6
+ParentObject 78
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 80 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -55 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -80 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 10 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Rotate Foam
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 -15 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 79
+ShadowOptions 7
+
+AddNullObject Null Target Camera Waterfall
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  0 0 0 -12.7 0 0 1 1 1
+  0 0 0 0 0
+  0 0 0 32.3 0 0 1 1 1
+  3 0 0 0 0
+  0 0 0 174.1001 0 0 1 1 1
+  6 0 0 0 0
+EndBehavior 1
+LockedChannels 48
+ParentObject 80
+ShadowOptions 7
+
+AddNullObject Speilskum
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 180 0 180 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+AddNullObject Camera null
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  3
+  45.69816 410 120.2373 -144.4 29.4 0 1 1 1
+  0 0 0 0 0
+  -91.55453 392.788 73.94276 -205.3156 29.21076 0 1 1 1
+  2048 0 0 0 0
+  -122.8476 365 -35.7284 -268.2998 27.39997 0 1 1 1
+  4095 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\lgrid_2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -105 -110 0 0 0 -22.6 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\tun_tmr.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+Metamorph 1.000000
+MorphTarget 84
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\tun_mtr.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ObjDissolve 1.000000
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\lgrid_2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  -105 -110 0 0 0 -22.6 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 19
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\tun_tmr.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 19
+Metamorph 1.000000
+MorphTarget 84
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\spiptmr.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+Metamorph 1.000000
+MorphTarget 88
+MorphSurfaces 0
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\spipmtr.lwo
+ShowObject 0 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\plate1.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 2.4 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 81
+ShadowOptions 7
+
+LoadObject X:\demo\watrfall\objects\plate2.lwo
+ShowObject 8 7
+ObjectMotion (unnamed)
+  9
+  1
+  0 0 2.4 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+ParentObject 81
+ShadowOptions 7
+
+AmbientColor 255 255 255
+AmbIntensity 0.250000
+
+AddLight
+LightName FLR1 00.5000 x;|flares|flare19.jpg
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -5 260 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4
+ParentObject 20
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 1
+LensFlare 1
+FlareIntensity 0.500000
+FlareDissolve 0.000000
+LensFlareFade 8
+LensFlareOptions 11
+FlareRingColor 80 20 10
+FlareRingSize 0.220000
+FlareRandStreakInt 0.030000
+FlareRandStreakDens 50.000000
+FlareRandStreakSharp 6.000000
+ShadowType 1
+
+AddLight
+LightName FLR1 00.5000 x;|flares|flare19.jpg
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -5 260 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 4
+ParentObject 23
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 1
+LensFlare 1
+FlareIntensity 0.500000
+FlareDissolve 0.000000
+LensFlareFade 8
+LensFlareOptions 11
+FlareRingColor 80 20 10
+FlareRingSize 0.220000
+FlareRandStreakInt 0.030000
+FlareRandStreakDens 50.000000
+FlareRandStreakSharp 6.000000
+ShadowType 1
+
+AddLight
+LightName FLR1 00.5000 x;|flares|flare19.jpg
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -5 -260 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 6
+ParentObject 82
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 1
+LensFlare 1
+FlareIntensity 0.500000
+FlareDissolve 0.000000
+LensFlareFade 8
+LensFlareOptions 11
+FlareRingColor 80 20 10
+FlareRingSize 0.220000
+FlareRandStreakInt 0.030000
+FlareRandStreakDens 50.000000
+FlareRandStreakSharp 6.000000
+ShadowType 1
+
+AddLight
+LightName FLR1 00.5000 x;|flares|flare19.jpg
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  -5 -260 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LockedChannels 6
+ParentObject 85
+LightColor 255 255 255
+LgtIntensity 1.000000
+LightType 1
+LensFlare 1
+FlareIntensity 0.500000
+FlareDissolve 0.000000
+LensFlareFade 8
+LensFlareOptions 11
+FlareRingColor 80 20 10
+FlareRingSize 0.220000
+FlareRandStreakInt 0.030000
+FlareRandStreakDens 50.000000
+FlareRandStreakSharp 6.000000
+ShadowType 1
+
+AddLight
+LightName Tullelys
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity (envelope)
+  1
+  4
+  1
+  0 0 0 0 0
+  1
+  2687 1 0 0 0
+  0
+  2688 1 0 0 0
+  1
+  3134 1 0 0 0
+EndBehavior 1
+LightType 0
+ShadowType 1
+
+AddLight
+LightName Tullelys
+ShowLight 1 7
+LightMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 1
+LightColor 255 255 255
+LgtIntensity (envelope)
+  1
+  4
+  1
+  0 0 0 0 0
+  1
+  3134 1 0 0 0
+  0
+  3135 1 0 0 0
+  1
+  3582 1 0 0 0
+EndBehavior 1
+LightType 0
+ShadowType 1
+
+ShowCamera 1 7
+CameraMotion (unnamed)
+  9
+  1
+  0 0 0 0 0 0 1 1 1
+  0 0 0 0 0
+EndBehavior 2
+ParentObject 81
+ZoomFactor 2.000000
+Resolution 1
+CustomSize 320 240
+PixelAspectRatio 2
+SegmentMemory 2200000
+Antialiasing 0
+AdaptiveSampling 1
+AdaptiveThreshold 16
+FilmSize 2
+FieldRendering 0
+MotionBlur 0
+DepthOfField 0
+
+SolidBackdrop 1
+BackdropColor 0 0 0
+ZenithColor 0 40 80
+SkyColor 120 180 240
+GroundColor 50 40 30
+NadirColor 100 80 60
+FogType 0
+DitherIntensity 1
+AnimatedDither 0
+
+RenderMode 2
+RayTraceEffects 0
+ClipRayColors 0
+RayRecursionLimit 16
+DataOverlayLabel
+FullSceneParamEval 0
+
+ViewMode 5
+ViewAimpoint 0.000000 60.000000 990.000000
+ViewDirection 0.300197 -0.314159 0.000000
+ViewZoomFactor 6.000004
+GridNumber 40
+GridSize 1000.000000
+ShowMotionPath 1
+ShowBGImage 0
+ShowFogRadius 0
+ShowRedraw 0
+ShowSafeAreas 0
+ShowFieldChart 0

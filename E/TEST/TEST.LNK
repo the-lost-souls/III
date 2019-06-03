@@ -1,0 +1,12 @@
+name w:\test\test.exe
+file w:\test\test.obj
+file w:\general\var.obj
+file w:\general\aquarium.obj
+file w:\pak\pak.obj
+file w:\divlibs\zlib\zlib.lib
+file w:\vectors\scn_file.obj
+file w:\vectors\vec_file.obj
+file w:\vectors\vec_run.obj
+file w:\general\texture.obj
+file w:\gfx\tga.obj
+

@@ -1,0 +1,10 @@
+L_NormalVX      DD 0.0
+L_NormalVY      DD 0.0
+L_NormalVZ      DD 0.0
+L_PosX          DD 0.0
+L_PosY          DD 0.0
+L_PosZ          DD 0.0
+L_OutR          DD 0.0
+L_OutG          DD 0.0
+L_OutB          DD 0.0
+L_CRange        DD 255.0

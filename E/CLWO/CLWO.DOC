@@ -1,0 +1,63 @@
+Description of CLWO and VEC-fileformat
+Cyberfish/TLS
+04.08.1998
+
+
+[ CLWO (general) ]
+
+LWO_VEC (located in w:\clwo\lwo.cpp) finds the object's type by itself,
+and uses fixed numbers for the types (flatshading, tmapped, envmapped
+etc...). These numbers may need updating if SYS_OList changes. The
+type-detection is overrided by the -t parameter.
+
+The type-detection checks the following parameters when detecting. If
+one of the statements is true, the following statements are ignored.
+
+* If Transparency != 0.0 and there is a Transparent Texture -> glass
+* If Transparency != 0.0, the material is set as transparent.
+* If a Reflection Image is present, the material is set as envmapped.
+* If a standard tmap is present, the object is set as texturemapped.
+* If none of this statements is true, the material is
+set as standard flatshaded, no tmap.
+
+
+
+[ Chunks ]
+
+The chunk-headers consist of one identifier (4 bytes), followed by the
+chunk's size (4 bytes), not including the header's 8 bytes.
+
+
+
+[ VEC_FILE_Header ]
+
+The header in all VEC-files follows the structure of VEC_FILE_Header
+(class located in w:\vectors\vec.h). The field Size in the header
+describes the size of the header-chunk, not including the text-IDString.
+This IDString is 256 bytes, and chunk-reading should start from offset
+256 in all files.
+
+After the header, chunks can come in any order.
+
+
+
+[ VEC_FILE_VertChunk ]
+
+This chunk contains the object's vertices. The structure has an array of
+VEC_FILE_Vertice.
+
+
+
+[ VEC_FILE_FaceChunk ]
+
+This chunk contains the object's faces. The structure has an array of
+VEC_FILE_Face.
+
+
+
+[ VEC_FILE_MaterialChunk ]
+
+This chunk contains the object's materials. The structure has an array
+of VEC_FILE_Material. Each material within the VEC_FILE_MaterialChunk is
+set up as subchunks, and should be read like chunks, not like fixed-size
+arrays.

@@ -1,0 +1,20 @@
+PAK_Create island.pak Turalleri
+PAK_AddFile x:\object\island.vec
+PAK_AddFile x:\object\islandr.vec
+PAK_AddFile x:\object\islandw.vec
+PAK_AddFile x:\object\islands.vec
+PAK_AddFile x:\object\island4.vec
+PAK_AddFile x:\object\island2.vec
+PAK_AddFile x:\object\island3.vec
+PAK_AddFile x:\object\island5.vec
+PAK_AddFile x:\object\island6.vec
+PAK_AddFile x:\object\sun.vec
+PAK_AddFile island3.scn
+PAK_AddFile x:\maps\700ldclr.tga
+PAK_AddFile x:\maps\island03.tga
+PAK_AddFile x:\maps\island04.tga
+PAK_AddFile x:\maps\redsky.tga
+PAK_AddFile x:\maps\sea_wat2.tga
+PAK_Info
+
+

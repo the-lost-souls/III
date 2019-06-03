@@ -1,0 +1,54 @@
+Description for GIF-decoder
+
+Last update : 30.08.1997
+Cyberfish of The Lost Souls
+
+
+
+In:
+        edx = offset filename
+        ecx = filesize (if 0, then read entire file)
+        esi = fileoffset to start reading GIF
+
+Out:
+        edi = Offset decoded picture
+        GIF_SWidth    DD 0                              ;Screen horisontal res
+        GIF_SHeigth   DD 0                              ;Screen vertical res
+        GIF_Width     DD 0                              ;Image width
+        GIF_Heigth    DD 0                              ;Image heigth
+        GIF_XPos      DD 0                              ;Image's horisontal pos
+        GIF_YPos      DD 0                              ;Image's vertical pos
+        GIF_Colors    DD 0                              ;Number of colors in GIF
+        GIF_Palette   DB 768 DUP (0)                    ;Palette (RGB)
+
+        cf and SYS_QuitMsg set if any error
+
+
+!!!Uses MEM-services!!!
+
+
+     First, the decoder reserves memory for file and loads it into that
+buffer (GIF_FileBuf). Then it reserves memory for codestream (GIF_CodeBuf)
+and charstreams (GIF_STables). The size of GIF_CodeBuf may be too small,
+(currently at 128k), which also goes for GIF_STables (currently 384k). After
+reading the GIF header, it allocates memory for the picture. All other
+memory allocations are deallocated before returning.
+
+     The first 16k of the string-table is pointers to the charstreams.
+
+STable [ 0000 ] = Offset to charstream of code 0
+STable [ 0001 ] = Offset to charstream of code 1
+
+...
+
+STable [ MaxCode ] = Offset to charstram of code MaxCode
+
+The first DWORD bytes of each charstream is the length of the string, followed
+by the string itself.
+
+
+------------------------------- IMPORTANT -----------------------------------
+* The decoder won't work if GIF contains extension blocks (GIF89a)
+* It DOES work with interlaced pictures
+* NOT working with anything else than 256 color GIFs.
+* No testing of codevalues. A corrupt GIF will phuck up everything.

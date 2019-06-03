@@ -1,0 +1,50 @@
+Description for CLWS and SCN-fileformat
+Cyberfish/TLS
+04.08.1998
+
+
+[ CLWS (general) ]
+
+
+
+[ Chunks ]
+
+The chunk-headers consist of one identifier (4 bytes), followed by the
+chunk's size (4 bytes), not including the header's 8 bytes. When one
+chunk is read, the pointer should be moved by the chunk's size.
+
+
+
+[ SCN_FILE_Header ]
+
+The header of all .scn-files follows the SCN_FILE_Header (located in
+w:\vectors\scn.h). The chunksize in the structure does not include the
+text IDString which is 256 bytes. The chunkreading should start at
+fileoffset 256.
+
+
+
+[ SCN_FILE_Object ]
+
+
+
+[ SCN_FILE_Light ]
+
+
+
+[ Light-plugins ]
+
+Following a light, there may be envelopes. There is currently four of
+them, all of them following the SCN_FILE_Envelope-structures. These
+envelopes are modifiers for the following light-variables, and are
+one-channel keyframes (SCN_FILE_Keyframe1). The chunk ID's are as
+following:
+
+SCN_FILE_LightIntensity_ID = LINT : Modifies light's intensity.
+SCN_FILE_LightRange_ID	   = LRNG : Modifies light's range.
+SCN_FILE_LightEdgeAngle_ID = LEDG : Modifies light's edgeangle (spots)
+SCN_FILE_LightConeAngle_ID = LCON : Modifies light's coneangle (spots)
+
+
+
+[ SCN_FILE_Camera ]

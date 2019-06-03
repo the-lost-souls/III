@@ -1,0 +1,8 @@
+pak_open dill.pak
+pak_addfile w:\test\s.exe
+pak_addfile w:\test\flare.exe
+pak_addfile w:\test\bottom.tga
+pak_addfile w:\test\top.tga
+pak_addfile w:\test\sides.tga
+pak_info
+

@@ -1,0 +1,12 @@
+option caseexact
+file v.obj
+file w:\general\general.lib
+file w:\vectors\vectors.lib
+file w:\render\render.lib
+file w:\gfx\gfx.lib
+file w:\plugins\plugins.lib
+file w:\test\lists.obj
+file w:\test\callback.obj
+file w:\midas111\lib\dos\wcretail\midas.lib
+file w:\vbe\vbe.lib
+

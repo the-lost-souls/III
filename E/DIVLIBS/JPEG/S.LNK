@@ -1,0 +1,6 @@
+option caseexact
+name test.exe
+file test.obj
+file libjpeg.lib
+
+
