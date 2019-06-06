@@ -9,5 +9,8 @@ Check out the [nfo](src/TLS_III.NFO) for credits and the [TLS pages](https://the
 ## Compiling
 The source is a mix of C++ and hand optimized x86 assembler with dependencies on some rather archaic 3rd party libraries for loading jpegs, playing music etc. Originally, it was compiled for MSDOS using Watcom 11 and Turbo Assembler 5, so I building it today will be a bit of a challenge.
 
+- src/E is the engine
+- src/DEMOSTUF is the data + the demo-specific code
+
 ## The data files
 All the 3D objects and scenes were done in Lightwave, then run through a homemade parser to produce binary files (.VEC and .SCN) that was then packaged into so-called 'PAK' files by yet another homemade zip-file-like system.
