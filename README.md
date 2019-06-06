@@ -4,7 +4,7 @@
 
 This is all the source code and material for the demo 'III - Live Tomorrow' made by The Lost Souls. The demo finished 2nd at The Gathering 1999 in Hamar, Norway.
 
-Check out the [nfo](src/TLS_III.nfo) for credits and the [TLS pages](https://the-lost-souls.github.io) for more demos.
+Check out the [nfo](src/TLS_III.NFO) for credits and the [TLS pages](https://the-lost-souls.github.io) for more demos.
 
 ## Compiling
 The source is a mix of C++ and hand optimized x86 assembler with dependencies on some rather archaic 3rd party libraries for loading jpegs, playing music etc. Originally, it was compiled for MSDOS using Watcom 11 and Turbo Assembler 5, so I building it today will be a bit of a challenge.
