@@ -1,6 +1,6 @@
 # III - Live Tomorrow
 
-[![screenshot](https://the-lost-souls.github.io/images/thumbnails/III.jpg)](https://www.youtube.com/watch?v=Rd-w4rKwvr4)
+[![screenshot](https://the-lost-souls.github.io/images/thumbnails/III.jpg)](https://youtu.be/rMkFe3xxZmA)
 
 This is all the source code and material for the demo 'III - Live Tomorrow' made by The Lost Souls. The demo finished 2nd at The Gathering 1999 in Hamar, Norway.
 
